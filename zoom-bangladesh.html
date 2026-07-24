@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Youth Foundation Rebrand — Zoom Bangladesh | S.M. Ali Afsar</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#1D1D1F;
+    --ink-dim:#6E6E73;
+    --charcoal:#F5F5F7;
+    --panel:#FFFFFF;
+    --panel-2:#F0F0F2;
+    --line:#D2D2D7;
+    --cyan:#3B8CFF;
+    --cyan-dim: rgba(59,140,255,0.14);
+  }
+  *{ scroll-behavior:smooth; }
+  body{ background:var(--charcoal); color:var(--ink); font-family:'Inter',sans-serif; overflow-x:hidden; }
+  .font-display{ font-family:'Space Grotesk',sans-serif; }
+
+  .fade-up{ opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; }
+  .fade-up.in-view{ opacity:1; transform:translateY(0); }
+
+  .noise-grid{
+    background-image:
+      linear-gradient(to right, rgba(0,0,0,0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0,0,0,0.045) 1px, transparent 1px);
+    background-size:44px 44px;
+  }
+
+  .glow-btn{ transition:all .3s ease; }
+  .glow-btn:hover{ box-shadow:0 0 0 1px var(--cyan), 0 0 30px rgba(59,140,255,.45); transform:translateY(-2px); }
+
+  .gallery-item{ transition:transform .4s ease, box-shadow .4s ease; cursor:pointer; }
+  .gallery-item:hover{ transform:translateY(-6px); box-shadow:0 20px 40px -20px rgba(59,140,255,0.3); }
+
+  .stat-card{ transition:transform .3s ease, border-color .3s ease; }
+  .stat-card:hover{ transform:translateY(-4px); border-color:var(--cyan); }
+
+  ::selection{ background:var(--cyan); color:#ffffff; }
+
+  /* lightbox */
+  #lightbox{ position:fixed; inset:0; background:rgba(29,29,31,0.92); z-index:100; display:none; align-items:center; justify-content:center; padding:24px; }
+  #lightbox.open{ display:flex; }
+  #lightbox img{ max-width:90vw; max-height:85vh; border-radius:12px; }
+  #lightbox-close{ position:absolute; top:24px; right:32px; color:white; font-size:2rem; cursor:pointer; }
+</style>
+</head>
+
+<body class="antialiased">
+
+<!-- ================= NAV ================= -->
+<header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] md:w-auto">
+  <nav class="flex items-center justify-between gap-6 md:gap-10 px-5 md:px-7 py-3 rounded-full border border-[var(--line)] bg-white/80 backdrop-blur-lg">
+    <a href="index.html" class="font-display font-semibold tracking-tight text-[var(--ink)] text-lg">
+      S.A<span class="text-[var(--cyan)]">.</span>
+    </a>
+    <a href="index.html#projects" class="glow-btn text-xs font-semibold px-4 py-2 rounded-full border border-[var(--cyan)] text-[var(--cyan)] flex items-center gap-2">
+      ← Back to Portfolio
+    </a>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="relative min-h-[70vh] flex items-center noise-grid px-6 md:px-16 pt-32 pb-16">
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse 60% 40% at 80% 20%, rgba(59,140,255,0.10), transparent 70%);"></div>
+  <div class="relative max-w-5xl mx-auto w-full fade-up">
+    <p class="font-display uppercase tracking-[0.3em] text-xs text-[var(--cyan)] mb-5">Case Study · Non-Profit Branding</p>
+    <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.1] mb-6">
+      Youth Foundation Rebrand — <span class="text-[var(--cyan)]">Zoom Bangladesh</span>
+    </h1>
+    <p class="text-[var(--ink-dim)] text-base md:text-lg max-w-2xl leading-relaxed">
+      Ongoing design and digital marketing partner for Zoom Bangladesh — designing campaign
+      creative, event branding, and social visuals that carry the organization's mission of
+      hope, education, and humanity to thousands of supporters.
+    </p>
+    <div class="flex flex-wrap gap-4 mt-9">
+      <a href="https://zoombangladesh.org/" target="_blank" class="glow-btn font-display font-semibold px-7 py-3.5 rounded-full bg-[var(--cyan)] text-white text-sm">
+        Visit zoombangladesh.org →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT THE ORG ================= -->
+<section class="px-6 md:px-16 py-24 border-t border-[var(--line)]">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-[0.9fr,1.1fr] gap-14 items-start">
+    <div class="fade-up">
+      <p class="font-display uppercase tracking-[0.3em] text-xs text-[var(--cyan)] mb-4">About The Client</p>
+      <h2 class="font-display text-3xl md:text-4xl font-semibold leading-tight">
+        A decade of hope, education &amp; humanity.
+      </h2>
+    </div>
+    <div class="fade-up space-y-5 text-[var(--ink-dim)] leading-relaxed" style="transition-delay:.1s">
+      <p>
+        Established in 2016, Zoom Bangladesh (formally the Zoombangla Youth Foundation) is a
+        registered non-profit organization under Bangladesh's Ministry of Social Welfare.
+        It's a youth-driven foundation working to transform the lives of street children and
+        underserved communities across the country.
+      </p>
+      <p>
+        The foundation runs education, free-food, employment-creation, healthcare, and
+        environmental programs — and in 2026 celebrates its 10th Foundation Day, marking a
+        decade of continuous community service.
+      </p>
+      <div class="grid grid-cols-2 gap-5 pt-2">
+        <div class="border-l-2 border-[var(--cyan)] pl-4">
+          <p class="font-display text-[var(--ink)] font-semibold">Founded</p>
+          <p class="text-sm mt-1">2016 · Dhaka, Bangladesh</p>
+        </div>
+        <div class="border-l-2 border-[var(--cyan)] pl-4">
+          <p class="font-display text-[var(--ink)] font-semibold">Registered as</p>
+          <p class="text-sm mt-1">MSW: DHA-010007 · RJSC: S-13394/2020</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- stats -->
+  <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-5 mt-16">
+    <div class="stat-card fade-up border border-[var(--line)] bg-[var(--panel)] rounded-2xl p-6 text-center">
+      <p class="font-display text-3xl text-[var(--cyan)]">650+</p>
+      <p class="text-xs text-[var(--ink-dim)] mt-2">Children in free schooling across 10 branches</p>
+    </div>
+    <div class="stat-card fade-up border border-[var(--line)] bg-[var(--panel)] rounded-2xl p-6 text-center" style="transition-delay:.05s">
+      <p class="font-display text-3xl text-[var(--cyan)]">350+</p>
+      <p class="text-xs text-[var(--ink-dim)] mt-2">Vulnerable communities supported</p>
+    </div>
+    <div class="stat-card fade-up border border-[var(--line)] bg-[var(--panel)] rounded-2xl p-6 text-center" style="transition-delay:.1s">
+      <p class="font-display text-3xl text-[var(--cyan)]">60,000</p>
+      <p class="text-xs text-[var(--ink-dim)] mt-2">Trees planted nationwide</p>
+    </div>
+    <div class="stat-card fade-up border border-[var(--line)] bg-[var(--panel)] rounded-2xl p-6 text-center" style="transition-delay:.15s">
+      <p class="font-display text-3xl text-[var(--cyan)]">10</p>
+      <p class="text-xs text-[var(--ink-dim)] mt-2">Years of continuous service (2016–2026)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHAT I DESIGNED ================= -->
+<section class="px-6 md:px-16 py-24 border-t border-[var(--line)] noise-grid">
+  <div class="max-w-6xl mx-auto">
+    <div class="fade-up mb-12 max-w-2xl">
+      <p class="font-display uppercase tracking-[0.3em] text-xs text-[var(--cyan)] mb-4">My Contribution</p>
+      <h2 class="font-display text-3xl md:text-4xl font-semibold">Campaign creative &amp; event branding.</h2>
+      <p class="text-[var(--ink-dim)] mt-4 leading-relaxed">
+        Designed a series of campaign posters and social creatives for Zoom Bangladesh's
+        seasonal programs — Ramadan Sehri &amp; Iftar distribution, Qurbani Eid, May Day
+        labour-rights awareness, the 10th Foundation Day, and the Sponsor A Child initiative —
+        keeping the organization's green-and-red identity consistent across every touchpoint.
+      </p>
+    </div>
+
+    <!-- gallery -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="gallery-item fade-up rounded-3xl border border-[var(--line)] bg-[var(--panel)] overflow-hidden" onclick="openLightbox('zoom-1.jpg')">
+        <img src="zoom-1.jpg" alt="Sehri & Iftar distribution campaign poster" class="w-full h-64 object-cover object-top">
+        <div class="p-5">
+          <p class="font-display font-semibold text-sm">Ramadan Sehri &amp; Iftar Program</p>
+          <p class="text-xs text-[var(--ink-dim)] mt-1">Daily meal-distribution campaign creative</p>
+        </div>
+      </div>
+      <div class="gallery-item fade-up rounded-3xl border border-[var(--line)] bg-[var(--panel)] overflow-hidden" style="transition-delay:.05s" onclick="openLightbox('zoom-2.jpg')">
+        <img src="zoom-2.jpg" alt="10th Foundation Day poster" class="w-full h-64 object-cover object-top">
+        <div class="p-5">
+          <p class="font-display font-semibold text-sm">10th Foundation Day</p>
+          <p class="text-xs text-[var(--ink-dim)] mt-1">Anniversary campaign, 2016–2026</p>
+        </div>
+      </div>
+      <div class="gallery-item fade-up rounded-3xl border border-[var(--line)] bg-[var(--panel)] overflow-hidden" style="transition-delay:.1s" onclick="openLightbox('zoom-3.jpg')">
+        <img src="zoom-3.jpg" alt="International Labour Day poster" class="w-full h-64 object-cover object-top">
+        <div class="p-5">
+          <p class="font-display font-semibold text-sm">International Labour Day</p>
+          <p class="text-xs text-[var(--ink-dim)] mt-1">May Day awareness creative</p>
+        </div>
+      </div>
+      <div class="gallery-item fade-up rounded-3xl border border-[var(--line)] bg-[var(--panel)] overflow-hidden" onclick="openLightbox('zoom-4.jpg')">
+        <img src="zoom-4.jpg" alt="Qurbani Eid 2026 campaign poster" class="w-full h-64 object-cover object-top">
+        <div class="p-5">
+          <p class="font-display font-semibold text-sm">Qurbani Eid 2026</p>
+          <p class="text-xs text-[var(--ink-dim)] mt-1">Donation-drive campaign design</p>
+        </div>
+      </div>
+      <div class="gallery-item fade-up rounded-3xl border border-[var(--line)] bg-[var(--panel)] overflow-hidden" style="transition-delay:.05s" onclick="openLightbox('zoom-5.jpg')">
+        <img src="zoom-5.jpg" alt="Sponsor A Child, 10 years of success banner" class="w-full h-64 object-cover object-top">
+        <div class="p-5">
+          <p class="font-display font-semibold text-sm">Sponsor A Child</p>
+          <p class="text-xs text-[var(--ink-dim)] mt-1">10-years-of-success web banner</p>
+        </div>
+      </div>
+      <div class="gallery-item fade-up rounded-3xl border border-[var(--cyan)] bg-[var(--cyan-dim)] overflow-hidden flex flex-col items-center justify-center text-center p-6" style="transition-delay:.1s">
+        <p class="font-display font-semibold text-lg mb-2">Want creative like this for your organization?</p>
+        <p class="text-xs text-[var(--ink-dim)] mb-5">Campaign posters, social kits, and full brand systems.</p>
+        <a href="index.html#contact" class="glow-btn font-display font-semibold px-6 py-3 rounded-full bg-[var(--cyan)] text-white text-sm">Let's Talk</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROGRAMS ================= -->
+<section class="px-6 md:px-16 py-24 border-t border-[var(--line)]">
+  <div class="max-w-6xl mx-auto">
+    <div class="fade-up mb-12 max-w-2xl">
+      <p class="font-display uppercase tracking-[0.3em] text-xs text-[var(--cyan)] mb-4">The Foundation's Work</p>
+      <h2 class="font-display text-3xl md:text-4xl font-semibold">Core programs Zoom Bangladesh runs.</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="fade-up border border-[var(--line)] bg-[var(--panel)] rounded-2xl p-6">
+        <p class="font-display font-semibold mb-1">Schooling Program</p>
+        <p class="text-sm text-[var(--ink-dim)]">Free education across 10 branches — 6 academic, 4 open-air — for 650+ children.</p>
+      </div>
+      <div class="fade-up border border-[var(--line)] bg-[var(--panel)] rounded-2xl p-6" style="transition-delay:.04s">
+        <p class="font-display font-semibold mb-1">Free Food Program</p>
+        <p class="text-sm text-[var(--ink-dim)]">Nutritious meals for street children, rickshaw pullers, and the elderly.</p>
+      </div>
+      <div class="fade-up border border-[var(--line)] bg-[var(--panel)] rounded-2xl p-6" style="transition-delay:.08s">
+        <p class="font-display font-semibold mb-1">Poriborton (Employment Creation)</p>
+        <p class="text-sm text-[var(--ink-dim)]">Housing and income-generating tools helping 350+ families become self-reliant.</p>
+      </div>
+      <div class="fade-up border border-[var(--line)] bg-[var(--panel)] rounded-2xl p-6" style="transition-delay:.12s">
+        <p class="font-display font-semibold mb-1">Youth &amp; Career Development</p>
+        <p class="text-sm text-[var(--ink-dim)]">Training programs preparing young people for stable, dignified work.</p>
+      </div>
+      <div class="fade-up border border-[var(--line)] bg-[var(--panel)] rounded-2xl p-6" style="transition-delay:.16s">
+        <p class="font-display font-semibold mb-1">Blood Donation &amp; Medical Camp</p>
+        <p class="text-sm text-[var(--ink-dim)]">Community health drives and free medical support.</p>
+      </div>
+      <div class="fade-up border border-[var(--line)] bg-[var(--panel)] rounded-2xl p-6" style="transition-delay:.2s">
+        <p class="font-display font-semibold mb-1">Environment &amp; Tree Plantation</p>
+        <p class="text-sm text-[var(--ink-dim)]">60,000+ trees planted nationwide to fight deforestation and climate change.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA / SOURCE ================= -->
+<section class="px-6 md:px-16 py-20 border-t border-[var(--line)] noise-grid text-center">
+  <div class="max-w-2xl mx-auto fade-up">
+    <h2 class="font-display text-2xl md:text-3xl font-semibold mb-4">Learn more directly from Zoom Bangladesh</h2>
+    <p class="text-[var(--ink-dim)] mb-8">All organizational facts and figures on this page are sourced from the foundation's official website.</p>
+    <a href="https://zoombangladesh.org/" target="_blank" class="glow-btn font-display font-semibold px-7 py-3.5 rounded-full bg-[var(--cyan)] text-white text-sm">
+      zoombangladesh.org →
+    </a>
+    <div class="mt-10">
+      <a href="index.html#projects" class="text-sm font-semibold text-[var(--ink-dim)] hover:text-[var(--cyan)] transition-colors">← Back to all projects</a>
+    </div>
+  </div>
+</section>
+
+<footer class="px-6 md:px-16 py-10 border-t border-[var(--line)] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[var(--ink-dim)]">
+  <p>&copy; 2026 S.M. Ali Afsar. All rights reserved.</p>
+  <p>Designed with care in Dhaka, Bangladesh.</p>
+</footer>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox(event)">
+  <span id="lightbox-close" onclick="closeLightbox(event)">&times;</span>
+  <img id="lightbox-img" src="" alt="Enlarged view">
+</div>
+
+<script>
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in-view'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+
+  function openLightbox(src){
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('open');
+  }
+  function closeLightbox(e){
+    document.getElementById('lightbox').classList.remove('open');
+  }
+</script>
+</body>
+</html>
